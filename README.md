@@ -78,3 +78,32 @@ You can use these credentials to log in and test the application features accord
   - `maven-compiler-plugin` (Java compilation config)  
   - `spring-boot-maven-plugin` (build and run Spring Boot app)  
 
+## API Endpoints Overview
+
+# API Endpoints Overview with Authorities
+
+| Endpoint                  | HTTP Method | Description                              | Authorities (Roles)               |
+|---------------------------|-------------|----------------------------------------|---------------------------------|
+| `/api/users/users`         | GET         | Get all users                          | ADMIN                           |
+| `/api/users/{id}`          | GET         | Get user by ID                        | ADMIN                           |
+| `/api/users`               | POST        | Create a new user (register)          | Public (no restriction)          |
+| `/api/users/{id}`          | PUT         | Update user information               | ADMIN                           |
+| `/api/users/{id}`          | DELETE      | Delete user by ID                     | ADMIN                           |
+| `/api/members`             | GET         | Get all members                      | ADMIN, LIBRARIAN                |
+| `/api/members/{id}`        | GET         | Get member by ID                    | ADMIN, LIBRARIAN                |
+| `/api/members`             | POST        | Create a new member                 | ADMIN, LIBRARIAN                |
+| `/api/members/{id}`        | PUT         | Update member information          | ADMIN, LIBRARIAN                |
+| `/api/members/{id}`        | DELETE      | Delete member by ID                 | ADMIN, LIBRARIAN                |
+| `/api/borrows`             | GET         | Get all borrowing transactions      | ADMIN, LIBRARIAN, STAFF         |
+| `/api/borrows/{id}`        | GET         | Get transaction by ID              | ADMIN, LIBRARIAN, STAFF         |
+| `/api/borrows`             | POST        | Borrow a book                      | ADMIN, LIBRARIAN                |
+| `/api/borrows/return/{id}` | PUT         | Return a borrowed book             | LIBRARIAN, STAFF                |
+| `/api/books`               | GET         | Get all books                     | Public (permitAll)               |
+| `/api/books/{id}`          | GET         | Get book by ID                   | Public (permitAll)               |
+| `/api/books`               | POST        | Create a new book                | ADMIN, LIBRARIAN                |
+| `/api/books/{id}`          | PUT         | Update book information          | ADMIN, LIBRARIAN                |
+| `/api/books/{id}`          | DELETE      | Delete a book by ID              | ADMIN, LIBRARIAN                |
+| `/api/auth/register`       | POST        | Register a new user               | Public (no restriction)          |
+| `/api/auth/login`          | POST        | Authenticate user and get token | Public (no restriction)          |
+| `/api/activity-logs`       | GET         | Get all user activity logs       | ADMIN                           |
+
