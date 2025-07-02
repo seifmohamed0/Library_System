@@ -107,3 +107,20 @@ You can use these credentials to log in and test the application features accord
 | `/api/auth/login`          | POST        | Authenticate user and get token | Public (no restriction)          |
 | `/api/activity-logs`       | GET         | Get all user activity logs       | ADMIN                           |
 
+## System Requirements
+
+- **Java Version:** 21  
+  - This project requires JDK 21. Make sure you have Java 21 installed on your machine.
+
+- **MySQL Version:** 8.0 or higher  
+  - The database used is MySQL. It is recommended to use version 8.0 or above for compatibility with Hibernate and JPA.
+
+- **Build Tool:** Maven  
+  - Maven is required to build and manage the project dependencies.
+
+- **Spring Boot Version:** 3.x  
+  - The project uses Spring Boot 3.x, so your development environment should be compatible with this version.
+
+### Notes
+
+- Make sure MySQL server is running and the database `library_db` is created as explained in the setup instructions.
