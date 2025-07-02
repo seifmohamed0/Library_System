@@ -86,7 +86,7 @@ You can use these credentials to log in and test the application features accord
 |---------------------------|-------------|----------------------------------------|---------------------------------|
 | `/api/users/users`         | GET         | Get all users                          | ADMIN                           |
 | `/api/users/{id}`          | GET         | Get user by ID                        | ADMIN                           |
-| `/api/users`               | POST        | Create a new user (register)          | Public (no restriction)          |
+| `/api/users`               | POST        | Create a new user (register)          | Public (no restriction for testing)          |
 | `/api/users/{id}`          | PUT         | Update user information               | ADMIN                           |
 | `/api/users/{id}`          | DELETE      | Delete user by ID                     | ADMIN                           |
 | `/api/members`             | GET         | Get all members                      | ADMIN, LIBRARIAN                |
